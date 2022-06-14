@@ -1,0 +1,16 @@
+{
+    "active_config": "test",
+    "test": {
+        "key_1": {
+            "key_1_1": "value_1_1_test",
+            "key_1_2": "value_1_2_test"
+        }
+
+    },
+    "prod": {
+        "key_1": {
+            "key_1_1": "value_1_1",
+            "key_1_2": "value_1_2"
+        }
+    }
+}
