@@ -3,7 +3,8 @@
     "test": {
         "key_1": {
             "key_1_1": "value_1_1_test",
-            "key_1_2": "value_1_2_test"
+            "key_1_2": "value_1_2_test",
+			"list_utf8" : ["poznámka"]
         }
 
     },

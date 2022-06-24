@@ -41,7 +41,7 @@ class Test_AppConfig(unittest.TestCase):
     def test_correct_settings(self):
         self._appConfig.init(logger_config_file='config/test.logging.conf', config_file='config/test.configdef.json')
         logger = self._appConfig.logger
-        logger.debug("Logger found")
+        logger.debug("test_correct_settings")
         cfg = self._appConfig.config
         self.assertEqual(cfg["key_1"]["key_1_2"], "value_1_2_test")
         self.assertNotEqual(cfg["key_1"]["key_1_2"], "value_1_3_test")
@@ -50,6 +50,13 @@ class Test_AppConfig(unittest.TestCase):
         with self.assertRaises(KeyError):
             value = cfg["key_3"]["key_1_2"]
         
+    def test_utf8(self):
+        self._appConfig.init(logger_config_file='config/test.logging.conf', config_file='config/test.configdef.json')
+        logger = self._appConfig.logger
+        logger.debug("test_utf8")
+        cfg = self._appConfig.config
+        logger.debug(cfg)
+        self.assertTrue("poznámka" in cfg["key_1"]["list_utf8"])
 
 if __name__ == "__main__":
     unittest.main()

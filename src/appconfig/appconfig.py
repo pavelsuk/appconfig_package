@@ -84,11 +84,12 @@ class AppConfig(object):
             config_file {str} -- relative path+fname to config file
         """
 
-        with open(self._root_path.joinpath(config_file), 'r') as cfg_file:
+        with open(self._root_path.joinpath(config_file), 'r', encoding='utf-8') as cfg_file:
             cfg_values = json.load(cfg_file)
             if (not config_group):
                 config_group = cfg_values['active_config']
             self._config = cfg_values[config_group]
+            self._logger.debug('Opening config file')
             self._logger.debug('cfg_values= {}'.format(cfg_values))
 
     @property
