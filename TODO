@@ -13,11 +13,11 @@ Documentation:
     ☐ How to build it
 
 Publishing:
-    ☐ Choose good name for the lib
+    ✔ Choose good name for the lib @done(22-06-25 16:58)
     ☐ Update config files
     ☐ Decide how to share it localy
-    ☐ Find out the way how to publish it on pypi
-    ☐ Publish it on pypi
+    ✔ Find out the way how to publish it on pypi @done(22-06-25 16:58)
+    ✔ Publish it on pypi @done(22-06-25 16:58)
     ☐ Test it via pip (including updates)
     ☐ Publish it on conda
     ☐ Test it via conda

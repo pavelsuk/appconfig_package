@@ -16,7 +16,11 @@ TODO
 python -m pip install build twine
 ```
 
-### Run
+### Run the batch on win
+
+- just run `build.bat` for publishing the version on testpypi or `build_prod.bat` for production pypi
+
+### Run build only
 Run it in the root folder
 
 ``` shell
