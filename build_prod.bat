@@ -1,5 +1,5 @@
 REM call bumpver update --patch --dry
-call bumpver update --patch -t alpha
+call bumpver update --patch
 REM call bumpver update --minor
 del dist\*.* /q
 call python -m build
