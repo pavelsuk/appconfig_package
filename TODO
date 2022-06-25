@@ -1,0 +1,26 @@
+
+TODO LIST
+
+Library:
+    ☐ If there is no path/file defined, try to find one in the current dir or .\config\ folder
+    ☐ Should I use the same log as the app
+    ☐ Is the way how I use global variable the best one?
+    ☐ Improve test cases
+    ☐ Specify dependencies in `install_requires` section
+
+Documentation:
+    ☐ Usage examples
+    ☐ How to build it
+
+Publishing:
+    ☐ Choose good name for the lib
+    ☐ Update config files
+    ☐ Decide how to share it localy
+    ☐ Find out the way how to publish it on pypi
+    ☐ Publish it on pypi
+    ☐ Test it via pip (including updates)
+    ☐ Publish it on conda
+    ☐ Test it via conda
+    ☐ Automate building and publishing
+    ☐ Automate it on github
+
