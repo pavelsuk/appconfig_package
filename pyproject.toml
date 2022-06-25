@@ -3,7 +3,7 @@ requires = ["setuptools>=42"]
 build-backend = "setuptools.build_meta"
 
 [tool.bumpver]
-current_version = "0.0.6.1006-alpha"
+current_version = "0.0.6.1007"
 version_pattern = "MAJOR.MINOR.PATCH.BUILD[-TAG]"
 commit_message = "bump version {old_version} -> {new_version}"
 commit = true
