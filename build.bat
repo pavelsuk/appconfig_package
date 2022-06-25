@@ -1,6 +1,6 @@
 REM call bumpver update --patch --dry
 REM call bumpver update --patch
-call bumpver update
+call bumpver update -t alpha
 del dist\*.* /q
 call python -m build
 call python -m pip install -e .
