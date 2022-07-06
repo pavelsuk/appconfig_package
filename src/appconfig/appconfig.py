@@ -34,6 +34,16 @@ class AppConfig(object):
             self._root_path = pathlib.Path(root_path)
             # TODO Check if the path exists
 
+        if(config_file is None): # TODO try to find the file in several dirs
+            config_file = 'config/private.configdef.json'
+
+        if(logger_config_file is None): # TODO try to find the file in several dirs
+            logger_config_file = 'config/logging.conf'
+
+        if(logger_config_section is None):
+            logger_config_section = 'dbg'
+
+
         # print(f'Root path {root_path}')
 
         self.init_logging(logger, logger_config_file, logger_config_section, logger_verbosity)    
@@ -53,6 +63,12 @@ class AppConfig(object):
             return
 
         if logger is None:
+
+            if(logger_config_file is None):
+                logger_config_file = 'config/logging.conf'
+
+            if(logger_config_section is None):
+                logger_config_section = 'dbg'
 
             logfile = self._root_path.joinpath(logger_config_file)
 
