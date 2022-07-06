@@ -21,7 +21,8 @@ class AppConfig(object):
                     config_file: str = 'config/private.configdef.json',
                     logger=None,
                     logger_config_file: str = 'config/logging.conf',
-                    logger_config_section: str = 'dbg' 
+                    logger_config_section: str = 'dbg',
+                    logger_verbosity: str = None
                     ):
         
         self._logger = None
@@ -35,7 +36,7 @@ class AppConfig(object):
 
         # print(f'Root path {root_path}')
 
-        self.init_logging(logger, logger_config_file, logger_config_section)    
+        self.init_logging(logger, logger_config_file, logger_config_section, logger_verbosity)    
 
         self._logger.debug('ApiClient.__init__')
         self.read_json(config_group, config_file)
@@ -45,7 +46,8 @@ class AppConfig(object):
     def init_logging(self, 
                     logger=None,
                     logger_config_file: str = 'config/logging.conf',
-                    logger_config_section: str = 'dbg' 
+                    logger_config_section: str = 'dbg',
+                    logger_verbosity: str = None 
                     ):
         if(not self._logger is None):
             return
@@ -64,6 +66,8 @@ class AppConfig(object):
 
             logging.config.fileConfig(logfile)
             logger = logging.getLogger(logger_config_section)
+            if(logger_verbosity):
+                logger.setLevel(logger_verbosity)
         self._logger = logger
 
 

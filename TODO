@@ -18,9 +18,10 @@ Publishing:
     ☐ Decide how to share it localy
     ✔ Find out the way how to publish it on pypi @done(22-06-25 16:58)
     ✔ Publish it on pypi @done(22-06-25 16:58)
-    ☐ Test it via pip (including updates)
+    ✔ Test it via pip (including updates) @done(22-06-25 17:49)
+    ✔ Automate building and publishing @done(22-06-25 17:49)
     ☐ Publish it on conda
     ☐ Test it via conda
-    ☐ Automate building and publishing
+    ☐ Automate publishing to conda
     ☐ Automate it on github
 
